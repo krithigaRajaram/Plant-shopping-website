@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursery | Decorative Items</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+    <header>
+
+        <div class="header-1">
+    
+            <a href="#" class="logo"><i class="fas fa-seedling"></i>Plandom</a>
+            <!--
+                    <form action="" class="search-box-container">
+                        <input type="search" id="search-box" placeholder="search here...">
+                        <label for="search-box" class="fas fa-search"></label>
+                    </form>-->
+            
+        </div>
+    
+        <div class="header-2">
+    
+            <div id="menu-bar" class="fas fa-bars"></div>
+    
+            <nav class="navbar">
+                <a href="index.html">HOME</a>
+                <a href="index.html">CATEGORY</a>
+               <!-- <a href="#product">product</a>-->
+                <a href="aboutus.html">ABOUT US</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="log.html">LOGIN</a>
+                
+            </nav>
+    
+            <div class="icons">
+                <a href="/cart" class="fas fa-shopping-cart"></a>
+                <a href="/searching" class="fas fa-search"></a>
+                <a href="/profile" class="fas fa-user-circle"></a>
+            </div>
+            
+                
+             </div>
+    
+        </div>
+    
+    </header>
+    
+<section class="category" id="category">
+
+    <h1 class="heading"><span>DECORATIVES</span></h1>
+
+    <div class="box-container">
+        <% items.forEach(function(image) { %>
+            <div class="box">
+                
+                    
+                <h3><%= image.name %></h3>
+                <img src="data:image/<%=image.img.contentType%>;base64,
+                                 <%=image.img.data.toString('base64')%>" alt="">      
+                    
+                    <p><%= image.desc %></p>
+                    <h2>price:Rs.<%= image.price %></h2>
+                    <form action="/add-to-cart" method="POST">
+                        <input type="hidden" name="id" id="id" value="<%=image.id%>">
+                        <input type="hidden" name="price" id="price" value="<%=image.price%>">
+                        <input type="hidden" name="name" id="name" value="<%=image.name%>">
+                        <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if(this.value.length == 2) return false;">
+                        <input type="submit" value="add to cart" class="btn btn-primary" name="submit" onClick="addcart()"></input>
+                        <script>
+                            function addcart(){
+                                alert('Added to cart')
+                            }
+
+                        </script>
+                    </form>
+               
+                
+                <!-- <a href="log.html" class="btn">shop now</a>-->
+            </div>
+           
+            <% }) %>
+            
+        
+
+    </div>
+
+</section>
+<script src="script.js"></script>
+</body>
+</html>

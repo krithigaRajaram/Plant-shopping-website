@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursery | Decorative Items</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+    <header>
+
+        <div class="header-1">
+    
+            <a href="#" class="logo"><i class="fas fa-seedling"></i>Plandom</a>
+            <!--
+                    <form action="" class="search-box-container">
+                        <input type="search" id="search-box" placeholder="search here...">
+                        <label for="search-box" class="fas fa-search"></label>
+                    </form>-->
+            
+        </div>
+    
+        <div class="header-2">
+    
+            <div id="menu-bar" class="fas fa-bars"></div>
+    
+            <nav class="navbar">
+                <a href="index.html">HOME</a>
+                <a href="index.html">CATEGORY</a>
+               <!-- <a href="#product">product</a>-->
+                <a href="aboutus.html">ABOUT US</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="log.html">LOGIN</a>
+                
+            </nav>
+    
+            <div class="icons">
+                <a href="/cart" class="fas fa-shopping-cart"></a>
+                <a href="/searching" class="fas fa-search"></a>
+                <a href="/profile" class="fas fa-user-circle"></a>
+            </div>
+            
+                
+             </div>
+    
+        </div>
+    
+    </header>
+    
+    
+<section class="category" id="category">
+
+    <h1 class="heading"><span>PRODUCTS</span></h1>
+
+    <div class="box-container">
+        <form action="ser" method="post">
+            <input type="searching" id="searching" name="searching" class="box"  placeholder="Search here..." maxlength="100">
+            <input type="submit" value="search" class="fas fa-search" name="search_btn">
+        
+            
+        </form>
+               
+        <% items.forEach(function(image) { %>
+            <form action="/add-to-cart" method="post" class="box">
+    
+    
+                <input type="text" class="icon-rtl">
+                
+         
+                  
+                  <input type="submit" class="fa-solid fa-cart-circle-plus" value="cart" id="submit"  >
+             
+                  <h3><%= image.name %></h3>
+                  <img src="data:image/<%=image.img.contentType%>;base64,
+                                   <%=image.img.data.toString('base64')%>" alt="">      
+                      
+                      <p><%= image.desc %></p>
+                      <h2>price:Rs.<%= image.price %></h2>
+                      
+                          <input type="hidden" name="id" id="id" value="<%=image.id%>">
+                          <input type="hidden" name="price" id="price" value="<%=image.price%>">
+                          <input type="hidden" name="name" id="name" value="<%=image.name%>">
+                          <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if(this.value.length == 2) return false;">
+                          <input type="submit" value="add to cart" class="btn btn-primary" name="submit" onClick="addcart()"></input>
+                          <script src="script.js"></script>
+                      
+                 
+                </form>
+              
+            
+             <% }) %>
+    
+    
+          
+          
+    
+         
+    
+       </div>
+    
+    </section>
+    
+    
+<script src="script.js"></script>
+</body>
+</html>

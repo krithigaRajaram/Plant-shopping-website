@@ -1,0 +1,355 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+  --green:#106f37ed;
+  --black:#020202;
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  
+  transition: all .2s linear;
+}
+
+*::selection{
+  background:var(--green);
+  color:#fff;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6.5rem;
+  scroll-behavior: smooth;
+}
+
+section{
+  padding:2rem 9%;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  background:var(--green);
+  color:#fff;
+  padding:.8rem 3rem;
+  font-size: 1.7rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background:var(--black);
+}
+
+.heading{
+  text-align: center;
+  color:var(--black);
+  
+  padding:1rem;
+  font-size: 3.5rem;
+  padding-bottom: 2rem;
+}
+
+.heading span{
+  color:var(--green);
+  
+}
+
+.header-1{
+  background:#eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:2rem 9%;
+}
+.header .flex .profile{
+  width: 30rem;
+  position: absolute;
+  top:120%; right: 2rem;
+  background-color: var(--white);
+  border:var(--border);
+  padding:1.5rem;
+  text-align: center;
+  display: none;
+  animation: fadeIn .2s linear;
+}
+
+.header .flex .profile.active{
+  display: block;
+}
+
+.header .flex .profile .name{
+  font-size: 1.7rem;
+  margin-bottom: .5rem;
+}
+
+.header .flex .profile .account{
+  font-size: 1.7rem;
+  color:var(--light-color);
+  margin-top: 1.5rem;
+}
+
+.header .flex .profile .account a{
+  color:var(--black);
+  text-decoration:underline;
+}
+
+.header .flex .profile .account a:hover{
+  color:var(--red);
+}
+
+
+.logo{
+  color:var(--black);
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+.logo i{
+  padding-right: .5rem;
+  color:var(--green);
+}
+
+.header-1 .search-box-container{
+  display: flex;
+  height:5rem;
+}
+
+.header-1 .search-box-container #search-box{
+  height: 100%;
+  width:100%;
+  padding:1rem;
+  font-size: 2rem;
+  color:#333;
+  border:.1rem solid rgba(0,0,0,.3);
+  
+}
+
+.header-1 .search-box-container label{
+  height: 100%;
+  width:8rem;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  color:#fff;
+  background:var(--green);
+  text-align: center;
+  cursor: pointer;
+}
+
+.header-1 .search-box-container label:hover{
+  background:var(--black);
+}
+
+.header-2{
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:2rem 9%;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  position: relative;
+}
+
+.header-2.active{
+  position: fixed;
+  top:0; left: 0; right:0;
+  z-index: 10000;
+}
+
+.header-2 .navbar a{
+  padding:1.5rem 1.5rem;
+  font-size: 2.2rem;
+  border-radius: .5rem;
+  color:var(--black);
+  font-weight: bolder;
+}
+
+.header-2 .navbar a:hover{
+  color:var(--green);
+  
+}
+
+.header-2 .icons a{
+  font-size: 2.5rem;
+  color:var(--black);
+  padding-left: 1rem;
+}
+
+.header-2 .icons a:hover{
+  color:var(--green);
+}
+
+#menu-bar{
+  font-size: 3rem;
+  border-radius: .5rem;
+  border:.1rem solid var(--black);
+  padding:.8rem 1.5rem;
+  color:var(--black);
+  cursor: pointer;
+  display: none;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  background:var(--green);
+  color:var(--green);
+  padding:.8rem 3rem;
+  font-size: 1.7rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background:var(--green);
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman';
+  background-image: url('../images/pexels-darius-krause-2609107.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+  height: 100vh;
+overflow: hidden;
+}
+.payment{
+  background: #f8f8f8;
+  max-width: 360px;
+  margin: 80px auto;
+  height: auto;
+  padding: 35px;
+  padding-top: 70px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.payment h2{
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  color: #0d3c61;
+}
+
+.form .label{
+  display: block;
+  color: #555555;
+  margin-bottom: 6px;
+}
+
+.input{
+  padding: 13px 0px 13px 25px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #dddddd;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  outline: none;
+  font-size: 16px;
+  color: #555555;
+}
+
+.card-grp{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-item{
+  width: 48%;
+}
+
+.space{
+  margin-bottom: 20px;
+}
+
+.icon-relative{
+  position: relative;
+}
+
+.icon-relative .fas,
+.icon-relative .far{
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  font-size: 20px;
+  color: #555555;
+}
+
+.btn{
+  margin-top: 40px;
+  background: green;
+  padding: 12px;
+  text-align: center;
+  color: #f8f8f8;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.payment-logo{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background: #f8f8f8;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  text-align: center;
+  line-height: 85px;
+}
+
+.payment-logo:before{
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 90px;
+  height: 90px;
+  background: green;
+  border-radius: 50%;
+}
+
+.payment-logo p{
+  position: relative;
+  color: #f8f8f8;
+  font-family: 'Baloo Bhaijaan', cursive;
+  font-size: 58px;
+}
+
+
+
+.user-details .user{
+  
+    border:var(--border);
+    padding:3rem;
+    max-width: 60rem;
+    margin:0 auto;
+  }
+  .user-details .user h1{
+font-size: 2.5rem;
+font-weight: bolder;
+  }
+  .user-details .user label{
+    font-size: 2rem;
+    
+      }
+
+h1{
+  text-align: center;
+}
+  
+  
+  
+ 
+  
+  

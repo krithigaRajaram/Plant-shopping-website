@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursery | cart</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fas fa-seedling"></i>Plandom</a>
+<!--
+        <form action="" class="search-box-container">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>-->
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="index.html">HOME</a>
+            <a href="index.html">CATEGORY</a>
+           <!-- <a href="#product">product</a>-->
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="log.html">LOGIN</a>
+            
+        </nav>
+
+        <div class="icons">
+            <a href="/cart" class="fas fa-shopping-cart"></a>
+            <a href="/searching" class="fas fa-search"></a>
+            <a href="/profile" class="fas fa-user-circle"></a>
+        </div>
+        
+            
+         </div>
+
+    </div>
+
+</header>
+
+<div class="heading">
+   <h3>CART</h3>
+   
+</div>
+
+<section class="products">
+
+  
+
+   <div class="cart-total">
+     
+        
+      <p>Grand Total : Rs:<span><%=total%></span></p>
+      <a href="payment.html" class="btn">Place Order</a>
+     
+      </div>
+   </div>
+<section class="category">
+     
+      <div class="box-container">
+   
+         <% items.forEach(function(image) { %>
+            <form action="cartbtn" method="post" class="box">
+            <a href="cart" class="cat"></a>
+        
+         <button class="fas fa-times" type="submit" name="delete" onclick="return confirm('delete this item?')"></button>
+        
+         <div class="box">
+            <h3><%= image.name %></h3>
+            <img src="data:image/<%=image.img.contentType%>;base64,
+            <%=image.img.data.toString('base64')%>"alt="">
+           
+           
+            <h2>price:Rs.<%= image.price %></h2>
+         </form>
+           <!-- <form action="edit" method="post" class="box">-->
+            <input type="hidden" name="sid" id="sid" value="<%=image.id%>">
+            <input type="hidden" name="price" id="price" value="<%=image.price%>">
+           
+            </form>
+         </div>
+      
+         <% }) %>
+         
+        
+      </div>
+      
+
+    
+</section> 
+  
+
+   <div class="more-btn">
+      <form action="deleteall" method="post" class="box">
+      <button class="delete-btn" type="submit" name="delete" onclick="return confirm('delete all from cart?');">Delete All</button>
+      </form>
+   </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursery | Login</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/log.css">
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fas fa-seedling"></i>Plandom</a>
+<!--
+        <form action="" class="search-box-container">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>-->
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="index.html">HOME</a>
+            <a href="index.html">CATEGORY</a>
+           <!-- <a href="#product">product</a>-->
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+            <a href="log.html">LOGIN</a>
+            
+        </nav>
+
+        <div class="icons">
+            <a href="/cart" class="fas fa-shopping-cart"></a>
+            <a href="/searching" class="fas fa-search"></a>
+            <a href="/profile" class="fas fa-user-circle"></a>
+        </div>
+        
+            
+         </div>
+
+    </div>
+
+</header>
+
+    <div class="center">
+        <h1>Login</h1>
+       
+        <form  action="loginDetails" method="post">
+            <div class="txt_field">
+                <input type="text" id="email" name="email" required>
+                <label>Enter username</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="password" name="password" required>
+                <label>Enter password</label>
+            </div>
+            
+                <input type="submit"  value="LOGIN">
+               
+                
+           <div class="signup_link">New customer?<a href=signup.html> Signup</a></div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursery | Edit Profile</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+    <header>
+
+        <div class="header-1">
+    
+            <a href="#" class="logo"><i class="fas fa-seedling"></i>Plandom</a>
+<!--
+        <form action="" class="search-box-container">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>-->
+
+    
+        </div>
+    
+        <div class="header-2">
+    
+            <div id="menu-bar" class="fas fa-bars"></div>
+    
+            <nav class="navbar">
+                <a href="index.html">HOME</a>
+                <a href="index.html">CATEGORY</a>
+               <!-- <a href="#product">product</a>-->
+                <a href="aboutus.html">ABOUT US</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="log.html">LOGIN</a>
+                
+            </nav>
+    
+            <div class="icons">
+                <a href="/cart" class="fas fa-shopping-cart"></a>
+                <a href="/searching" class="fas fa-search"></a>
+                <a href="/profile" class="fas fa-user-circle"></a>
+            </div>
+            
+                
+             </div>
+    
+        </div>
+    
+    </header>
+
+<section class="user-details" >
+   <div class="user">
+    <img src="images/acc.jpg" alt="">
+      
+      <%customersList.forEach( customer=> {%>
+         <p><i class="fas fa-user"></i> <span><%= customer.name %></span></p>
+         <p><i class="fas fa-envelope"></i> <span><%=customer.username %></span></p>
+         <%})%> 
+   <form action="update_pro" method="POST">
+     <input type="password" maxlength="20" id="new_pass" name="new_pass" placeholder="enter your new password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" maxlength="20" id="confirm_pass" name="confirm_pass" placeholder="confirm your new password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="text" required maxlength="70" id="address" name="address" placeholder="enter your address" class="box" oninput="this.value = this.value.replace(/\s/g, '')" >
+      <input type="number" id="number" min="0" max="9999999999" onkeypress="if(this.value.length == 10) return false;" placeholder="enter your number" required class="box" name="number">
+      <input type="submit" value="Update Now" class="btn" name="submit" >
+
+   </form>
+   
+   </div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
